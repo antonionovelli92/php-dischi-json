@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Php Discs</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js"
+      integrity="sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootsrtap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css"
+      integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w=="
+      crossorigin="anonymous"
+    />
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- script -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="container" id="header-container">
+          <div class="header-left">
+            <img
+              src="http://pluspng.com/img-png/spotify-logo-png-open-2000.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <div id="discs-container">
+            <div v-for="disc in discs" :key="disc.title" class="disc">
+              <img :src="disc.poster" :alt="`${disc.title} - ${disc.author}`" />
+              <h3>{{disc.title}}</h3>
+              <address>{{disc.author}}</address>
+              <strong>{{disc.year}}</strong>
+              <span>{{disc.genre}}</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

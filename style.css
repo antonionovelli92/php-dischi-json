@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #1d2d3c;
+}
+header{
+    background-color: #06131f;
+}
+.container{
+    width: 1080px;
+    margin: 0 auto;
+    height: 100%;
+}
+header{
+    height: 80px;
+}
+#header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-left img{
+    display: block;
+    height: 40px;
+}
+.header-right{
+    height: 40%;
+    padding: 6px;
+}
+
+#discs-container{
+        display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+
+}
+.disc{ 
+        flex-basis: 33%;
+            background-color: rgba(70, 109, 182, 0.285);
+            color: white;
+            padding: 5px;
+            text-align-last: center;
+            margin: 1rem 0;
+        }
+.disc img{
+   width: 100%;
+    height: auto;
+}
